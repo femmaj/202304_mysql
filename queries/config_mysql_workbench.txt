@@ -1,0 +1,14 @@
+SELECT * FROM users;
+
+INSERT INTO users (first_name)
+VALUE ('Fernanda')
+
+SELECT * FROM users
+WHERE first_name LIKE '%e';
+
+UPDATE users
+SET last_name = 'Matthaei'
+WHERE id = 6
+
+DELETE FROM tweets
+WHERE id = 14;
