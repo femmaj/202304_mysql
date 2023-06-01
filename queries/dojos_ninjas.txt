@@ -1,0 +1,50 @@
+INSERT INTO dojos (name)
+VALUES ('Santiago'), ('Londres'), ('Lima');
+
+DELETE FROM dojos;
+
+INSERT INTO dojos (name)
+VALUES ('Buenos Aires'), ('Miami'), ('Online')
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUE ('Martin', 'Perez', 28, 4),
+('Lorenza', 'Castro', 31, 4),
+('Camila', 'Aguirre', 38, 4);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUE ('Jaime', 'Gutierrez', 24, 5),
+('Lucas', 'Sepulveda', 33, 5),
+('Carolina', 'Irarrazaval', 36, 5);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUE ('Leonor', 'Keller', 35, 6),
+('Elisa', 'Hidalgo', 40, 6),
+('Maria', 'Smith', 29, 6);
+
+SELECT * FROM ninjas
+WHERE ninjas.dojo_id = 4;
+
+SELECT * FROM ninjas
+WHERE ninjas.dojo_id = 6;
+
+SELECT dojos.name, ninjas.first_name FROM dojos
+JOIN ninjas ON dojos.id = ninjas.dojo_id
+LIMIT 9
+OFFSET 8;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
